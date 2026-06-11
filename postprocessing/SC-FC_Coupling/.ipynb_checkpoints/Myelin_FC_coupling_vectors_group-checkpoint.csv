@@ -1,0 +1,4 @@
+group,fc_myelin_coupling_Vis,fc_myelin_coupling_SomMot,fc_myelin_coupling_DorsAttn,fc_myelin_coupling_SalVentAttn,fc_myelin_coupling_Limbic,fc_myelin_coupling_Cont,fc_myelin_coupling_Default
+DEMENTED,0.03833,-0.134281,-0.107293,-0.207418,-0.039411,-0.101375,-0.104228
+NORMCOG,0.098577,-0.04267,-0.028204,-0.096567,0.015695,-0.011124,-0.02645
+DIFFERENCE,0.060247,0.091611,0.079089,0.110851,0.055106,0.090251,0.077778

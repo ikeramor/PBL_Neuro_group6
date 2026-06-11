@@ -1,0 +1,6 @@
+T1T2 Log for sub-OAS30441
+Processing started at: 2026-06-01 09:00:29
+T1w median: 560.356445 
+T2w median: 93.333290 
+Scaling factor: 6.0038218410
+Successfully created T1w/T2w image.

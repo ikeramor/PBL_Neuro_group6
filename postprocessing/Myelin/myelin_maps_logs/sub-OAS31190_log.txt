@@ -1,0 +1,6 @@
+T1T2 Log for sub-OAS31190
+Processing started at: 2026-06-01 11:36:15
+T1w median: 498.354889 
+T2w median: 62.953983 
+Scaling factor: 7.9161772655
+Successfully created T1w/T2w image.

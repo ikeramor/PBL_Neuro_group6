@@ -1,0 +1,6 @@
+T1T2 Log for sub-OAS30961
+Processing started at: 2026-06-01 10:48:27
+T1w median: 691.734131 
+T2w median: 0.000000 
+Scaling factor: 
+ERROR - Image creation failed.

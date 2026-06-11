@@ -1,0 +1,19 @@
+Dataset,Model,Accuracy,Precision,Recall,F1-Score
+Coupling,KNN,0.7143,0.7067,0.7143,0.6989
+Coupling,Decision Tree,0.6267,0.622,0.6267,0.6241
+Coupling,Random Forest,0.7143,0.7063,0.7143,0.705
+Coupling,Logistic Regression,0.6866,0.6784,0.6866,0.6544
+Coupling,Naïve Bayes,0.6682,0.652,0.6682,0.6417
+Coupling,SVM,0.6959,0.6895,0.6959,0.667
+FC,KNN,0.5668,0.5459,0.5668,0.5527
+FC,Decision Tree,0.553,0.5399,0.553,0.5451
+FC,Random Forest,0.6359,0.6051,0.6359,0.5869
+FC,Logistic Regression,0.6359,0.6022,0.6359,0.5569
+FC,Naïve Bayes,0.6313,0.6028,0.6313,0.5964
+FC,SVM,0.6406,0.6796,0.6406,0.517
+Myelin,KNN,0.7373,0.7313,0.7373,0.7294
+Myelin,Decision Tree,0.6267,0.643,0.6267,0.6319
+Myelin,Random Forest,0.7373,0.7321,0.7373,0.7327
+Myelin,Logistic Regression,0.7465,0.7419,0.7465,0.7364
+Myelin,Naïve Bayes,0.7512,0.7525,0.7512,0.7518
+Myelin,SVM,0.7788,0.7784,0.7788,0.7694

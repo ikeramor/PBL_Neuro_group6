@@ -1,0 +1,6 @@
+T1T2 Log for sub-OAS30521
+Processing started at: 2026-06-01 09:16:16
+T1w median: 806.322571 
+T2w median: 110.512489 
+Scaling factor: 7.2962122045
+Successfully created T1w/T2w image.

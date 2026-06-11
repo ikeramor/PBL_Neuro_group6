@@ -1,0 +1,1 @@
+https://github.com/ThomasYeoLab/CBIG/blob/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/HCP/fslr32k/cifti/Schaefer2018_300Parcels_7Networks_order.dlabel.nii
