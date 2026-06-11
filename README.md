@@ -2,10 +2,6 @@
 
 Alzheimer’s Disease (AD) is the leading cause of dementia worldwide, and its diagnosis in the early stages remains a clinical challenge due to the symptomatic overlap with normal aging. In response, neuroimaging provides a non-invasive approach capable of capturing structural and functional alterations in the brain associated with this disease. This project investigates myelin-functional coupling within Resting-State Networks as a potential biomarker for Deep-Learning based classification and diagnosis of AD. Structural information is derived from T1-weighted and T2-weighted structural Magnetic Resonance Imaging scans, from which myelin-sensitive proxies are computed. Functional information, in turn, is derived from resting-state functional Magnetic Resonance Imaging scans through the characterization of functional connectivity patterns.
 
-```
-EDA → Preprocessing → Postprocessing → Deep Learning / ML Modelling
-```
-
 ---
 
 ##  Repository Structure
@@ -86,15 +82,13 @@ PBL_Neuro_group6/
 
 ---
 
-## 🗃️ Dataset
+## Dataset
 
 **OASIS-3** (Open Access Series of Imaging Studies — Longitudinal Multimodal Neuroimaging, Clinical, and Cognitive Dataset)
 
 - Longitudinal dataset with cognitively normal (CN) and Alzheimer's disease (AD) subjects
 - Modalities used: **T1w MRI**, **T2w MRI**, **resting-state fMRI**
 - Subjects were selected and curated through the EDA pipeline (see `eda/`)
-
-> ⚠️ Raw imaging data is **not included** in this repository due to size and data-sharing restrictions. Access the OASIS-3 dataset at [oasis-brains.org](https://www.oasis-brains.org/).
 
 ---
 
@@ -112,7 +106,7 @@ PBL_Neuro_group6/
 | Step | Tool | Description |
 |------|------|-------------|
 | Structural + functional MRI | **fMRIPrep** | T1w anatomical preprocessing + BOLD fMRI preprocessing, output to MNI152NLin2009cAsym space |
-| T2w MRI | **ANTs** (via Singularity) | Brain extraction + nonlinear registration to MNI space using T1w-derived transforms |
+| T2w MRI | **ANTs** | Brain extraction + nonlinear registration to MNI space using T1w-derived transforms |
 | Signal cleaning | **FD/GSR** | Framewise displacement-based censoring + global signal regression on fMRI timeseries |
 
 ### 3. Postprocessing / Feature Extraction (`postprocessing/`)
@@ -138,7 +132,7 @@ PBL_Neuro_group6/
 All MLP/CNN models use **Optuna** for automated hyperparameter optimization with stratified k-fold cross-validation.
 
 
-## 👥 Authors
+## Authors
 
 **Iker Amor, Ibai Azpeitia, Alvaro Santé and Ane Zabala**
 
