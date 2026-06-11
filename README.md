@@ -1,22 +1,10 @@
-# 🧠 PBL Neuro — Group 6: Alzheimer's Disease Classification
+# 🧠 PBL Neuro — Group 6: RESTING-STATE NETWORK MYELO-FUNCTIONAL COUPLING AS A CLINICAL BIOMARKER FOR DEEP LEARNING (DL) BASED DIAGNOSTIC CLASSIFICATION AND EARLY DETECTION OF ALZHEIMER’S DISEASE
 
-A project-based learning (PBL) study leveraging multimodal neuroimaging to classify Alzheimer's Disease (AD) using deep learning and machine learning approaches on the **OASIS-3** dataset.
-
----
-
-## 📋 Overview
-
-This repository contains the full analysis pipeline developed by **Group 6** for the Neuroimaging PBL course. The project investigates whether structural and functional brain imaging features — including T1w/T2w MRI, resting-state fMRI functional connectivity (FC), myelin maps, and structural–functional (SC–FC) coupling — can be used to distinguish cognitively normal individuals from those with Alzheimer's disease.
-
-The pipeline is organized into four main stages:
-
-```
-EDA → Preprocessing → Postprocessing → Deep Learning / ML Modelling
-```
+Alzheimer’s Disease (AD) is the leading cause of dementia worldwide, and its diagnosis in the early stages remains a clinical challenge due to the symptomatic overlap with normal aging. In response, neuroimaging provides a non-invasive approach capable of capturing structural and functional alterations in the brain associated with this disease. This project investigates myelin-functional coupling within Resting-State Networks as a potential biomarker for Deep-Learning based classification and diagnosis of AD. Structural information is derived from T1-weighted and T2-weighted structural Magnetic Resonance Imaging scans, from which myelin-sensitive proxies are computed. Functional information, in turn, is derived from resting-state functional Magnetic Resonance Imaging scans through the characterization of functional connectivity patterns.
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 PBL_Neuro_group6/
@@ -94,7 +82,7 @@ PBL_Neuro_group6/
 
 ---
 
-## 🗃️ Dataset
+## Dataset
 
 **OASIS-3** (Open Access Series of Imaging Studies — Longitudinal Multimodal Neuroimaging, Clinical, and Cognitive Dataset)
 
@@ -102,11 +90,9 @@ PBL_Neuro_group6/
 - Modalities used: **T1w MRI**, **T2w MRI**, **resting-state fMRI**
 - Subjects were selected and curated through the EDA pipeline (see `eda/`)
 
-> ⚠️ Raw imaging data is **not included** in this repository due to size and data-sharing restrictions. Access the OASIS-3 dataset at [oasis-brains.org](https://www.oasis-brains.org/).
-
 ---
 
-## 🔧 Pipeline
+## Pipeline
 
 ### 1. Exploratory Data Analysis (`eda/`)
 
@@ -120,7 +106,7 @@ PBL_Neuro_group6/
 | Step | Tool | Description |
 |------|------|-------------|
 | Structural + functional MRI | **fMRIPrep** | T1w anatomical preprocessing + BOLD fMRI preprocessing, output to MNI152NLin2009cAsym space |
-| T2w MRI | **ANTs** (via Singularity) | Brain extraction + nonlinear registration to MNI space using T1w-derived transforms |
+| T2w MRI | **ANTs** | Brain extraction + nonlinear registration to MNI space using T1w-derived transforms |
 | Signal cleaning | **FD/GSR** | Framewise displacement-based censoring + global signal regression on fMRI timeseries |
 
 ### 3. Postprocessing / Feature Extraction (`postprocessing/`)
@@ -145,55 +131,9 @@ PBL_Neuro_group6/
 
 All MLP/CNN models use **Optuna** for automated hyperparameter optimization with stratified k-fold cross-validation.
 
----
 
-## 🛠️ Requirements
+## Authors
 
-### Python
-- Python ≥ 3.8
-- `torch`, `torchvision`
-- `optuna`
-- `nilearn`, `nibabel`
-- `scikit-learn`, `pandas`, `numpy`, `matplotlib`, `seaborn`
-
-### Neuroimaging Tools
-- [fMRIPrep](https://fmriprep.org/) (≥ 23.x)
-- [ANTs](https://github.com/ANTsX/ANTs) (via Singularity container `ants.sif`)
-- [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/) license (required by fMRIPrep)
-- [Templateflow](https://www.templateflow.org/) — MNI152NLin2009cAsym template
+**Iker Amor, Ibai Azpeitia, Alvaro Santé and Ane Zabala**
 
 ---
-
-## 🚀 Getting Started
-
-1. **Obtain access to OASIS-3** at [oasis-brains.org](https://www.oasis-brains.org/) and download subjects listed in `eda/final_subjects.txt`.
-
-2. **Organize data** in BIDS format under `dataset/raw/`.
-
-3. **Run fMRIPrep preprocessing**:
-   ```bash
-   cd preprocessing/fmriprep
-   bash fmriprep_preprocessing.sh
-   ```
-
-4. **Run ANTs T2w preprocessing** (requires `ants.sif` Singularity image):
-   ```bash
-   cd preprocessing/ants
-   bash ants_preprocessing.sh
-   ```
-
-5. **Run postprocessing notebooks** in order within each `postprocessing/` subdirectory.
-
-6. **Train models** using notebooks inside `DL/`.
-
----
-
-## 👥 Authors
-
-**PBL Neuro — Group 6**
-
----
-
-## 📄 License
-
-This project is for academic/research purposes. Data use is subject to the [OASIS-3 Data Use Agreement](https://www.oasis-brains.org/#access).
