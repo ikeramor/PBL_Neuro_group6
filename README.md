@@ -137,7 +137,3 @@ All MLP/CNN models use **Optuna** for automated hyperparameter optimization with
 **Iker Amor, Ibai Azpeitia, Alvaro Santé and Ane Zabala**
 
 ---
-
-## 📄 License
-
-This project is for academic/research purposes. Data use is subject to the [OASIS-3 Data Use Agreement](https://www.oasis-brains.org/#access).
