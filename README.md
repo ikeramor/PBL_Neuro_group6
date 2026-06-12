@@ -88,7 +88,7 @@ PBL_Neuro_group6/
 
 - Longitudinal dataset with cognitively normal (CN) and Alzheimer's disease (AD) subjects
 - Modalities used: **T1w MRI**, **T2w MRI**, **resting-state fMRI**
-- Subjects were selected and curated through the EDA pipeline (see `eda/`)
+- Subjects were selected through the EDA pipeline (see `eda/`)
 
 ---
 
@@ -98,15 +98,14 @@ PBL_Neuro_group6/
 
 - Exploration of raw OASIS-3 file structure and metadata
 - Subject/session selection based on data quality and availability
-- Metadata cleaning: removal of bad T2w scans, addition of demographic variables
-- Final cohort defined in `final_subjects.txt`
+- Metadata cleaning: removal of bad T2w scans, addition of demographic variable
 
 ### 2. Preprocessing (`preprocessing/`)
 
 | Step | Tool | Description |
 |------|------|-------------|
-| Structural + functional MRI | **fMRIPrep** | T1w anatomical preprocessing + BOLD fMRI preprocessing, output to MNI152NLin2009cAsym space |
-| T2w MRI | **ANTs** | Brain extraction + nonlinear registration to MNI space using T1w-derived transforms |
+| Structural + functional MRI | **fMRIPrep** | T1w anatomical preprocessing + BOLD fMRI preprocessing|
+| T2w MRI | **ANTs** | T2w anatomical preprocessing |
 | Signal cleaning | **FD/GSR** | Framewise displacement-based censoring + global signal regression on fMRI timeseries |
 
 ### 3. Postprocessing / Feature Extraction (`postprocessing/`)
@@ -115,8 +114,8 @@ PBL_Neuro_group6/
 |---------|-------------|
 | **Functional Connectivity (FC)** | Pearson correlation matrices at network- and node-level using an atlas parcellation |
 | **Myelin maps** | T1w/T2w ratio as a proxy for cortical myelination, extracted per brain network |
-| **SC–FC Coupling** | Region-wise coupling between myelin-based structural features and FC |
-| **fMRI Timeseries** | Raw BOLD timeseries windowed for temporal sequence modelling |
+| **SC–FC Coupling** | Network-wise coupling between myelin-based structural features and FC |
+| **fMRI Timeseries** | BOLD timeseries windowed for temporal sequence modelling |
 
 ### 4. Deep Learning & Machine Learning (`DL/`)
 
@@ -128,8 +127,6 @@ PBL_Neuro_group6/
 | **3D CNN** | T1w / T2w volumes | Volumetric CNNs trained from scratch with Optuna search |
 | **MedicalNet (ResNet)** | T1w / T2w volumes | Transfer learning from MedicalNet pretrained 3D ResNet |
 | **LSTM** | fMRI timeseries | Recurrent models on windowed BOLD sequences for temporal classification |
-
-All MLP/CNN models use **Optuna** for automated hyperparameter optimization with stratified k-fold cross-validation.
 
 
 ## Authors
